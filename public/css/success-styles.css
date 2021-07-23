@@ -1,0 +1,14 @@
+#myVideo {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  line-height: 2;
+}
