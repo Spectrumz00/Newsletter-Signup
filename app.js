@@ -1,3 +1,4 @@
+// (IMPORTANT) Enter your Server Number , List ID , API key. (IMPORTANT)
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
@@ -28,9 +29,14 @@ app.post("/", function(req, res) {
     }]
   };
   const jsonData = JSON.stringify(data);
-  const url = "https:us6.api.mailchimp.com/3.0/lists/b895f948d7";
+
+
+  // (IMPORTANT) Enter your Server Number , List ID , API key here. (IMPORTANT)
+
+
+  const url = "https:us{SERVER NUMBER}.api.mailchimp.com/3.0/lists/{LIST ID}";
   const options = {
-    auth: "XYZ:0baffcb36abbee87bc392c16471cdd53-us6",
+    auth: "XYZ:{API KEY}",
     method: "POST"
   };
   const request = https.request(url, options, function(response) {
@@ -53,7 +59,3 @@ app.post("/failure", function(req, res) {
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running");
 });
-
-// API Key : 0baffcb36abbee87bc392c16471cdd53-us6
-// List ID : b895f948d7
-// Server : us6
